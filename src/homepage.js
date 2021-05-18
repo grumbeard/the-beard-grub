@@ -67,11 +67,11 @@ function createContentContainer(type) {
 }
 
 
-function initHomepage() {
+function loadHomepage() {
   const content = document.getElementById("content");
   const mainImage = createMainImage();
   const mainContent = createMainContent();
   content.append(mainImage, mainContent);
 }
 
-export default initHomepage
+export default loadHomepage
