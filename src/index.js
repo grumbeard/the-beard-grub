@@ -1,1 +1,3 @@
-console.log("WORKS")
+import initHomepage from "./homepage"
+
+initHomepage();
