@@ -1,0 +1,30 @@
+{
+  "name": "restaurant",
+  "version": "1.0.0",
+  "description": "Homepage of The Beard Grub: Beard-Soakingly Good Grub",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=development",
+    "serve": "webpack-dev-server --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/grumbeard/thebeardgrub.git"
+  },
+  "keywords": [
+    "restaurant",
+    "homepage"
+  ],
+  "author": "Grumbeard",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/grumbeard/thebeardgrub/issues"
+  },
+  "homepage": "https://github.com/grumbeard/thebeardgrub#readme",
+  "devDependencies": {
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0",
+    "webpack-dev-server": "^3.11.2"
+  }
+}
