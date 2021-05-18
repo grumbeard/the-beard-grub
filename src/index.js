@@ -1,27 +1,14 @@
+import initWebsite from "./website"
 import loadHomepage from "./homepage"
 import loadMenu from "./menu"
 
 
-function initNavBar() {
-  const content = document.getElementById("content");
-  const navBarContainer = document.createElement("div");
-  navBarContainer.id = "nav-bar-container";
+function initTabs() {
+  const tabs = document.querySelectorAll(".tab");
 
-  const tabNames = ["About", "Menu", "Locations"];
-  tabNames.forEach(tabName => {
-    let tab = document.createElement("div");
-    tab.classList.add("tab");
-    tab.setAttribute("data-tab", tabName.toLowerCase());
-    tab.innerText = tabName;
+  tabs.forEach(tab => {
     tab.addEventListener("click", toggleTab);
-
-    // SET FIRST TAB AS ACTIVE TAB
-    if (tabName == tabNames[0]) tab.classList.add("active");
-
-    navBarContainer.append(tab);
   });
-
-  content.append(navBarContainer);
 }
 
 function toggleTab(e) {
@@ -45,6 +32,6 @@ function toggleTab(e) {
   e.target.classList.add("active");
 }
 
-
-initNavBar();
+initWebsite();
+initTabs();
 loadHomepage();

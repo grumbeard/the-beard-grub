@@ -60,6 +60,16 @@ const desserts = [
   }
 ];
 
+function updateMainImage() {
+  const mainImage = document.querySelector(".main-image");
+
+  mainImage.setAttribute("src", "https://source.unsplash.com/Bt5VbQ8HSwc");
+  mainImage.setAttribute("alt-text", "Drenched Beard");
+
+  const imageCredit = document.querySelector(".main-image-container .image-credit");
+  imageCredit.innerText = "unsplash.com/@mishaalzahed";
+}
+
 function updateHeader() {
   const title = document.querySelector("header h1");
   title.innerText = "Beard-Soakers"
@@ -138,8 +148,8 @@ function createMenuItem(name, description, price, image, imageCredit) {
 }
 
 
-function loadMenu(e) {
-  console.log(e);
+function loadMenu() {
+  updateMainImage();
   updateHeader();
   updateSection();
 }

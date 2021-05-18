@@ -1,46 +1,27 @@
-function createMainImage() {
-  const mainImageContainer = createContentContainer("div");
-  mainImageContainer.classList.add("main-image-container");
+function updateMainImage() {
+  const mainImage = document.querySelector(".main-image");
 
-  const mainImage = document.createElement("img");
-  mainImage.classList.add("main-image")
   mainImage.setAttribute("src", "https://source.unsplash.com/FsyuKH9iFI8");
   mainImage.setAttribute("alt-text", "Moist Raspberry Chocolate Cake");
 
-  const imageCredit = document.createElement("p");
-  imageCredit.classList.add("image-credit");
-  imageCredit.innerText = "Image credit: ";
-
-  const creditLink = document.createElement("a");
-  creditLink.classList.add("credit-link");
-  creditLink.setAttribute("href", "https://unsplash.com/@jasmine_waheed");
-  creditLink.innerText = "@jasmine_waheed";
-
-  imageCredit.append(creditLink);
-  mainImageContainer.append(mainImage, imageCredit);
-
-  return mainImageContainer;
+  const imageCredit = document.querySelector(".main-image-container .image-credit");
+  imageCredit.innerText = "unsplash.com/@jasmine_waheed";
 }
 
-
-function createMainContent() {
-  const mainContentContainer = createContentContainer("main");
-  mainContentContainer.classList.add("main-content-container");
-
-  // MAKE HEADER
-  const headerContainer = createContentContainer("header");
-
-  const title = document.createElement("h1");
+function updateHeader() {
+  const title = document.querySelector("header h1");
   title.innerText = "The Beard Grub";
 
-  const tagline = document.createElement("p");
+  const tagline = document.querySelector("header p");
   tagline.innerText = "Beard-Soakingly Good Grub";
+}
 
-  headerContainer.append(title, tagline);
+function updateSection() {
+  const section = document.querySelector("section");
+  // EMPTY SECTION
+  section.innerHTML = "";
 
-  // MAKE CONTENT
-  const infoContainer = createContentContainer("section");
-
+  // POPULATE SECTION
   const info1 = document.createElement("p");
   info1.innerText = "Mon - Fri: 7 - 10 AM | 5 - 11 PM";
 
@@ -51,27 +32,14 @@ function createMainContent() {
   info3.setAttribute("href", "#");
   info3.innerText = "Join the waitlist"
 
-  infoContainer.append(info1, info2, info3);
-
-  mainContentContainer.append(headerContainer, infoContainer);
-
-  return mainContentContainer;
-}
-
-
-function createContentContainer(type) {
-  const contentContainer = document.createElement(type);
-  contentContainer.classList.add("content-container");
-
-  return contentContainer
+  section.append(info1, info2, info3);
 }
 
 
 function loadHomepage() {
-  const content = document.getElementById("content");
-  const mainImage = createMainImage();
-  const mainContent = createMainContent();
-  content.append(mainImage, mainContent);
+  updateMainImage();
+  updateHeader();
+  updateSection();
 }
 
 export default loadHomepage
