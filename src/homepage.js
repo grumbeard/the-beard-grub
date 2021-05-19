@@ -23,10 +23,10 @@ function updateSection() {
 
   // POPULATE SECTION
   const info1 = document.createElement("p");
-  info1.innerText = "Mon - Fri: 7 - 10 AM | 5 - 11 PM";
+  info1.innerText = "Mon - Fri: 7 - 10 AM | 5PM - 11 PM";
 
   const info2 = document.createElement("p");
-  info2.innerText = "Sat / PH: 5 - 2 AM";
+  info2.innerText = "Sat / Public Holidays: 5PM - 2 AM";
 
   const info3 = document.createElement("a");
   info3.setAttribute("href", "#");
