@@ -75,7 +75,7 @@ function updateHeader() {
   title.innerText = "Beard-Soakers"
 
   const tagline = document.querySelector("header p");
-  tagline.innerText = "Moist Mains";
+  tagline.innerText = "Just what you need to add a splash to your day";
 }
 
 function updateSection() {
