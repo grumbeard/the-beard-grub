@@ -102,6 +102,10 @@ footer {
 }
 
 @media (max-width: 600px) {
+  body {
+    height: auto;
+  }
+
   #content {
     grid-template-rows: 10vh 30vh minmax(0, 1fr) 10vh;
     grid-template-columns: 1fr;
@@ -110,6 +114,10 @@ footer {
       "image"
       "main"
       "footer";
+  }
+
+  section {
+    overflow: visible;
   }
 }
 
