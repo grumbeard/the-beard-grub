@@ -63,6 +63,17 @@ function createContentContainer(type) {
 }
 
 
+function initStylesheet() {
+  const head = document.querySelector("head");
+  const stylesheet = document.createElement("link");
+  stylesheet.setAttribute("rel", "stylesheet");
+  stylesheet.setAttribute("href", "./styles/main.css");
+  stylesheet.setAttribute("type", "text/css");
+
+  head.append(stylesheet);
+}
+
+
 function initWebsite() {
   const content = document.getElementById("content");
   const navBar = createNavBar();
@@ -70,6 +81,8 @@ function initWebsite() {
   const mainContent = createMainContent();
 
   content.append(navBar, mainImage, mainContent);
+
+  initStylesheet();
 }
 
 export default initWebsite
