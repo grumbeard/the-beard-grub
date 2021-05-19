@@ -174,3 +174,11 @@ section h3 {
   right: 1em;
   color: var(--credit-text);
 }
+
+.item-description {
+  font-style: italic;
+}
+
+.item-price {
+  color: var(--dark-grey);
+}

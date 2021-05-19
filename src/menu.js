@@ -121,7 +121,7 @@ function createMenuItem(name, description, price, image, imageCredit) {
   itemDescription.innerText = description;
 
   const itemPrice = document.createElement("p");
-  itemPrice.classList.add("itme-price");
+  itemPrice.classList.add("item-price");
   itemPrice.innerText = "$" + price;
 
   itemInfoContainer.append(itemName, itemDescription, itemPrice);
