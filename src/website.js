@@ -62,7 +62,7 @@ function createFooter() {
 
   const linkWrapper = document.createElement("a");
   linkWrapper.classList.add("link-wrapper");
-  linkWrapper.setAttribute("href", "https://github.com/grumbeard/thebeardgrub");
+  linkWrapper.setAttribute("href", "https://github.com/grumbeard/the-beard-grub");
 
   const githubLogoContainer = document.createElement("div");
   githubLogoContainer.classList.add("image-container", "logo-container");
