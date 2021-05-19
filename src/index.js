@@ -1,6 +1,7 @@
 import initWebsite from "./website"
 import loadHomepage from "./homepage"
 import loadMenu from "./menu"
+import loadLocations from "./locations"
 
 
 function initTabs() {
@@ -24,6 +25,9 @@ function toggleTab(e) {
       break;
     case "menu":
       loadMenu();
+      break;
+    case "locations":
+      loadLocations();
       break;
   }
   let active = document.querySelector(".active");

@@ -45,7 +45,7 @@ const desserts = [
     imageCredit: "unsplash.com/@portuguesegravity"
   },
   {
-    name: "Quarter-Melt Waddle",
+    name: "Meltdown Waddle",
     description: "Nam et felis rhoncus, luctus tellus at, porta magna. Praesent porta sollicitudin mi ut tristique. Phasellus mattis sed nulla in lacinia. ",
     price: 12,
     image: "https://source.unsplash.com/B5uXKlluUQE",
@@ -121,22 +121,22 @@ function createMenuItem(name, description, price, image, imageCredit) {
   itemDescription.innerText = description;
 
   const itemPrice = document.createElement("p");
-  itemPrice.classList.add("itme-price");
+  itemPrice.classList.add("item-price");
   itemPrice.innerText = "$" + price;
 
   itemInfoContainer.append(itemName, itemDescription, itemPrice);
 
   // MAKE IMAGE CONTAINER
   const itemImageContainer = document.createElement("div");
-  itemImageContainer.classList.add("item-image-container");
+  itemImageContainer.classList.add("image-container", "item-image-container");
 
   const itemImage = document.createElement("img");
-  itemImage.classList.add("item-image");
+  itemImage.classList.add("image", "item-image");
   itemImage.setAttribute("src", image);
   itemImage.setAttribute("alt-text", name);
 
   const itemImageCredit = document.createElement("p");
-  itemImageCredit.classList.add("item-image-credit");
+  itemImageCredit.classList.add("image-credit");
   itemImageCredit.innerText = imageCredit;
 
   itemImageContainer.append(itemImage, itemImageCredit);
