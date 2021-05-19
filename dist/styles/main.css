@@ -6,6 +6,8 @@
   --light-grey: rgb(112, 112, 112);
   --orange: rgb(255, 109, 45);
 
+  --h2-text: var(--dark-grey);
+  --h3-text-highlight: var(--dark-green);
   --main-bg: var(--orange);
   --main-text: var(--dark-grey);
   --nav-bg: var(--dark-green);
@@ -16,9 +18,8 @@
   --link-text: var(--dark-grey);
   --link-hover-text: var(--light-green);
   --link-text-highlight: var(--dark-green);
-  --h2-text: var(--dark-grey);
-  --h3-text-highlight: var(--dark-green);
   --credit-text: var(--light-grey);
+  --footer-bg: var(--dark-green);
 }
 
 
@@ -64,6 +65,14 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 0 1em;
+}
+
+footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--footer-bg);
 }
 
 .image-container {
@@ -176,4 +185,26 @@ section h3 {
 /* MAIN CONTENT -- MENU TAB */
 .map-image-container {
   height: 40vh;
+}
+
+.pin {
+  position: absolute;
+}
+
+
+/* FOOTER */
+.link-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-container {
+  width: 5vh;
+  height: 5vh;
+}
+
+.footer-text {
+  padding: 0 1em;
+  font-size: 0.8em;
 }

@@ -18,8 +18,9 @@ function createNavBar() {
   return navBarContainer;
 }
 
+
 function createMainImage() {
-  const mainImageContainer = createContentContainer("div");
+  const mainImageContainer = document.createElement("div");
   mainImageContainer.classList.add("image-container", "main-image-container");
 
   const mainImage = document.createElement("img");
@@ -33,12 +34,13 @@ function createMainImage() {
   return mainImageContainer;
 }
 
+
 function createMainContent() {
-  const mainContentContainer = createContentContainer("main");
+  const mainContentContainer = document.createElement("main");
   mainContentContainer.classList.add("main-content-container");
 
   // MAKE HEADER
-  const headerContainer = createContentContainer("header");
+  const headerContainer = document.createElement("header");
 
   const title = document.createElement("h1");
 
@@ -47,7 +49,7 @@ function createMainContent() {
   headerContainer.append(title, tagline);
 
   // MAKE CONTENT
-  const infoContainer = createContentContainer("section");
+  const infoContainer = document.createElement("section");
 
   mainContentContainer.append(headerContainer, infoContainer);
 
@@ -55,11 +57,30 @@ function createMainContent() {
 }
 
 
-function createContentContainer(type) {
-  const contentContainer = document.createElement(type);
-  contentContainer.classList.add("content-container");
+function createFooter() {
+  const footer = document.createElement("footer");
 
-  return contentContainer
+  const linkWrapper = document.createElement("a");
+  linkWrapper.classList.add("link-wrapper");
+  linkWrapper.setAttribute("href", "https://github.com/grumbeard/thebeardgrub");
+
+  const githubLogoContainer = document.createElement("div");
+  githubLogoContainer.classList.add("image-container", "logo-container");
+
+  const githubLogo = document.createElement("img");
+  githubLogo.classList.add("image", "logo");
+  githubLogo.setAttribute("src", "./images/github-logo.png");
+
+  githubLogoContainer.append(githubLogo);
+
+  const footerText = document.createElement("p");
+  footerText.classList.add("footer-text");
+  footerText.innerText = "Visit Repository";
+
+  linkWrapper.append(githubLogoContainer, footerText);
+  footer.append(linkWrapper);
+
+  return footer
 }
 
 
@@ -79,8 +100,9 @@ function initWebsite() {
   const navBar = createNavBar();
   const mainImage = createMainImage();
   const mainContent = createMainContent();
+  const footer = createFooter();
 
-  content.append(navBar, mainImage, mainContent);
+  content.append(navBar, mainImage, mainContent, footer);
 
   initStylesheet();
 }
