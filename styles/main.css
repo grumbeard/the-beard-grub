@@ -1,3 +1,13 @@
+/* FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Cabin&family=Pacifico&display=swap');
+h1, h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+body {
+  font-family: 'Cabin', sans-serif;
+}
+
 /* CUSTOM COLORS */
 :root {
   --dark-green: rgb(0, 161, 112);
@@ -16,8 +26,7 @@
   --active-tab-border: var(--light-green);
   --section-text: var(--light-green);
   --link-text: var(--dark-grey);
-  --link-hover-text: var(--light-green);
-  --link-text-highlight: var(--dark-green);
+  --link-hover-text: var(--dark-green);
   --credit-text: var(--light-grey);
   --footer-bg: var(--dark-green);
 }
@@ -150,8 +159,10 @@ a, a:active {
 }
 
 a:hover {
-  color: var(--link-hover-text);
-  background-color: var(--link-text-highlight);
+  text-decoration-line: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--link-hover-text);
+  border-radius: 5px;
 }
 
 section h2 {
@@ -172,6 +183,10 @@ section h3 {
 
 .item-image-container {
   height: 30vh;
+}
+
+.item-image {
+  border-radius: 15px 15px 0 0;
 }
 
 .item-description {
@@ -197,6 +212,12 @@ section h3 {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
+  width: 80%;
+}
+
+.link-wrapper:hover {
+  color: var(--light-green);
 }
 
 .logo-container {
