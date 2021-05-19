@@ -94,7 +94,7 @@ function updateSection() {
   });
 
   const dessertsTitle = document.createElement("h2");
-  mainsTitle.innerText = "Decadent Desserts";
+  dessertsTitle.innerText = "Decadent Desserts";
 
   section.append(dessertsTitle);
 
