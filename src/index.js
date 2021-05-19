@@ -1,7 +1,7 @@
 import initWebsite from "./website"
-import loadHomepage from "./homepage"
 import loadMenu from "./menu"
 import loadLocations from "./locations"
+import loadAbout from "./about"
 
 
 function initTabs() {
@@ -21,7 +21,7 @@ function toggleTab(e) {
 
   switch(e.target.dataset.tab) {
     case "about":
-      loadHomepage();
+      loadAbout();
       break;
     case "menu":
       loadMenu();
@@ -38,4 +38,4 @@ function toggleTab(e) {
 
 initWebsite();
 initTabs();
-loadHomepage();
+loadMenu();

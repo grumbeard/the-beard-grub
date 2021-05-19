@@ -2,7 +2,7 @@ function createNavBar() {
   const navBarContainer = document.createElement("div");
   navBarContainer.id = "nav-bar-container";
 
-  const tabNames = ["About", "Menu", "Locations"];
+  const tabNames = ["Menu", "Locations", "About"];
   tabNames.forEach(tabName => {
     let tab = document.createElement("div");
     tab.classList.add("tab");

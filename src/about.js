@@ -36,10 +36,10 @@ function updateSection() {
 }
 
 
-function loadHomepage() {
+function loadAbout() {
   updateMainImage();
   updateHeader();
   updateSection();
 }
 
-export default loadHomepage
+export default loadAbout
