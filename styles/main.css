@@ -66,6 +66,18 @@ body {
   padding: 0 1em;
 }
 
+@media (max-width: 400px) {
+  #content {
+    grid-template-rows: 10vh 30vh minmax(0, 1fr) 10vh;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "nav"
+      "image"
+      "main"
+      "footer";
+  }
+}
+
 
 /* NAVBAR */
 .tab {
