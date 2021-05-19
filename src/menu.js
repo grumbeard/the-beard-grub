@@ -45,7 +45,7 @@ const desserts = [
     imageCredit: "unsplash.com/@portuguesegravity"
   },
   {
-    name: "Quarter-Melt Waddle",
+    name: "Meltdown Waddle",
     description: "Nam et felis rhoncus, luctus tellus at, porta magna. Praesent porta sollicitudin mi ut tristique. Phasellus mattis sed nulla in lacinia. ",
     price: 12,
     image: "https://source.unsplash.com/B5uXKlluUQE",
