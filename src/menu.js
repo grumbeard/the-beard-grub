@@ -128,15 +128,15 @@ function createMenuItem(name, description, price, image, imageCredit) {
 
   // MAKE IMAGE CONTAINER
   const itemImageContainer = document.createElement("div");
-  itemImageContainer.classList.add("item-image-container");
+  itemImageContainer.classList.add("image-container", "item-image-container");
 
   const itemImage = document.createElement("img");
-  itemImage.classList.add("item-image");
+  itemImage.classList.add("image", "item-image");
   itemImage.setAttribute("src", image);
   itemImage.setAttribute("alt-text", name);
 
   const itemImageCredit = document.createElement("p");
-  itemImageCredit.classList.add("item-image-credit");
+  itemImageCredit.classList.add("image-credit");
   itemImageCredit.innerText = imageCredit;
 
   itemImageContainer.append(itemImage, itemImageCredit);

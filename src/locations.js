@@ -23,12 +23,13 @@ function updateSection() {
 
   // POPULATE SECTION
   const address = document.createElement("p");
-  address.innerText = "An oasis awaits close to the following locations:";
+  address.innerText = "An oasis awaits close to any of these locations:";
 
   const imageContainer = document.createElement("div");
-  imageContainer.classList.add("content-container");
+  imageContainer.classList.add("image-container", "map-image-container");
 
   const image = document.createElement("img");
+  image.classList.add("image", "map-image");
   image.setAttribute("src", "https://source.unsplash.com/Gw_UOoFk4Wk");
   image.setAttribute("alt-text", "Map");
 
@@ -43,6 +44,11 @@ function updateSection() {
     let pin = document.createElement("img");
     pin.classList.add("pin");
     pin.setAttribute("src", "./images/pin.svg");
+
+    // RANDOMIZE LOCATION
+    let bottom = Math.floor(Math.random() * 80);
+    let right = Math.floor(Math.random() * 80);
+    pin.setAttribute("style", `bottom:${bottom}%; right: ${right}%`);
 
     imageContainer.append(pin);
   }

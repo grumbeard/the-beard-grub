@@ -20,10 +20,10 @@ function createNavBar() {
 
 function createMainImage() {
   const mainImageContainer = createContentContainer("div");
-  mainImageContainer.classList.add("main-image-container");
+  mainImageContainer.classList.add("image-container", "main-image-container");
 
   const mainImage = document.createElement("img");
-  mainImage.classList.add("main-image")
+  mainImage.classList.add("image", "main-image")
 
   const imageCredit = document.createElement("p");
   imageCredit.classList.add("image-credit");
